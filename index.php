@@ -8,12 +8,25 @@
 
 require_once("CONFIG.php");
 
-$sql = new Sql();
+$root = new Usuario();
 
-$rawQuery = "SELECT * FROM tb_usuarios";
+$id = "3";
 
-$usuarios = $sql->select($rawQuery);
+$root->loadById($id);
 
-echo json_encode($usuarios);
+echo $root;
+
+
+// RECUPERA REGISTROS DO BANCO DE DADOS ****************************************
+
+//$sql = new Sql();
+//
+//$rawQuery = "SELECT * FROM tb_usuarios";
+//
+//$usuarios = $sql->select($rawQuery);
+//
+//echo json_encode($usuarios);
+
+
 
 ?>
